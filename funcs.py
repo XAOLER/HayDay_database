@@ -1,22 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-Cops = '111'
+GoBack = 'Press "0" to go back'
+goMany = 'Enter how many pieces:'
+Cops = {}
+item = 1
+def cops_calculator(name_cops, cost):
+    while int(item) > 0:
+        global item
+        item = input(goMany)
+        pcs = (int(item) * (cost/10))
+        print('{0}{1}{2}{3}{4}{5}{6}'.format('\n', name_cops, item, 'pcs. - ', int(pcs), ' Coins', '\n'))
+        print(GoBack)
 
-def conten2 (elem):
-    content = {'1': Cops, '2': TB, '3': AFP, '4': FMP, '5': IIJ, '6': build, '7': tools, '8': load}
-    print(content[elem])
-
-while (item >= 0 & item <= 9):
-
-    ```
-    while True:
-            print(contents)
-            item = input(conty)
-            if item == '00': break
-            item = int(item)
-            while item >= 0 & item <= 9:
-                print(content[item])
-                break
-            input(contb)
-    ```
+cops_calculator('corn ', 72)
