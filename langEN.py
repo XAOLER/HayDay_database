@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-lang_select = '''
-Нажміть клавішу "1" і кнопку "Enter" щоб вибрати yкраїнську мову
-Press key "2" and press "Enter" to select English language
-'''
-
 Start_Mess = ('''
     Welcome to Hay Day database.
     How does it work?
@@ -15,6 +10,8 @@ Start_Mess = ('''
 go = 'Press key "Enter" to continue :'
 conty = 'Enter the section:'
 contb = 'Press "Enter" to go back:'
+mess_error = 'Value error, try again'
+
 select_mode = ('''
     1.Simple mode.   - Information only
     2.Advanced mode. - Much information calculator ''')
@@ -26,13 +23,14 @@ contents = ('''
     5.Iron, Ingots and Jewelry
     6.Builds
     7.All tools
-    8.in development
+    8.Another and advice.
+
+    00. Exit
 
     The maximum price of 10 pieces, in a roadside bench.
     Cost "14.4" - 10pcs.  "14.x" cost to point  - 1pcs
+    ''')
 
-    00. Exit''')
-oth = '9.Another and advice.'
 Cops = ('''
 
     Wheat - 3.6
@@ -42,7 +40,7 @@ Cops = ('''
     Sugarcane - 14.4
     Rice - 18.8
     Indigo - 25.2
-    8Cotton - 28.8
+    Cotton - 28.8
     Pumpkin - 32.4
     Lettuce - 32.4
     Potato - 36.0
@@ -52,7 +50,7 @@ Cops = ('''
 
     More information, see Advanced mode
     ''')
-TB = ('''
+TreeBush = ('''
     Max. Cost - 10oct.
     Bush:
     Raspberry - 46.8
@@ -69,7 +67,7 @@ TB = ('''
 
     More information, see Advanced mode
     ''')
-AFP = ('''
+Animal_Fish_Product = ('''
     Animals products:
     Egg - 18.0
     Cow Milk - 32.4
@@ -175,6 +173,10 @@ build = ('''
      Personal Train(Rep.lvl.4) - 13000c. 6h.
     ''')
 
+city = ('''
+
+    ''')
+
 tools = ('''
     Expansion territory:
     Map Piece - 450.0
@@ -202,7 +204,7 @@ load = ('''
 
     ''')
 
-cop = ('''
+select_cops = ('''
     1.Wheat
     2.Corn
     3.Carrot
@@ -221,6 +223,35 @@ cop = ('''
     0.Come back
     ''')
 
+TreesBush = ('''
+    Bush:
+    1.Raspberry
+    2.Blackberry
+    3.Coffee
+    4.Nectar
 
-content = {1: Cops, 2: TB, 3: AFP, 4: FMP, 5: IIJ, 6: build, 7: tools, 8: load}
+    Tree:
+    5.Apple
+    6.Cherry
+    7.Cacao
+    8.Olive
+    9.Lemon:
+    0.Come back''')
 
+GoBack = 'Press "0" to go back'
+goMany = 'Enter how many pieces:'
+pcs_ = 'pcs.'
+cost_ = 'cost'
+coins = 'Coins'
+
+content = {1: Cops, 2: TreeBush, 3: Animal_Fish_Product, 4: FMP, 5: IIJ, 6: build, 7: tools, 8: load}
+
+nameCop = {1: 'Wheat', 2: 'Corn', 3: 'Carrot', 4: 'Soybean',
+           5: 'Sugarcane', 6: 'Rice', 7: 'Indigo', 8: 'Cotton',
+           9: 'Pumpkin', 10: 'Lettuce', 11: 'Potato', 12: 'Chili',
+           13: 'Tomato', 14: 'Strawberries'}
+
+costCop = {'Wheat': 36, 'Corn': 72, 'Carrot': 72, 'Soybean': 108,
+           'Sugarcane': 144, 'Rice': 188, 'Indigo': 252, 'Cotton': 288,
+           'Pumpkin': 324, 'Lettuce': 324, 'Potato': 360, 'Chili': 360,
+           'Tomato': 432, 'Strawberries': 504}
